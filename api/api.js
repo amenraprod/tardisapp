@@ -1,5 +1,5 @@
 
-const BASE_URL = 'http://localhost:3000/api/'
+const BASE_URL = 'http://localhost:3000/login'
 function callApi(endpoint, authenticated) {
 
   let token = localStorage.getItem('access_token') || null
