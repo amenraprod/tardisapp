@@ -1,0 +1,5 @@
+jest.unmock('../../src/ReactNativeTesting');
+
+import '../testutils/jest';
+import ReactNativeTesting from '../../src/ReactNativeTesting';
+import ReactNativeTestingChild from '../../src/ReactNativeTestingChild';
