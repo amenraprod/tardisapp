@@ -18,3 +18,5 @@ function callApi(endpoint, authenticated) {
 
             return fetch(login + endpoint, config)
              .then(response =>
+               response.text().then(text => ({ text, response }))
+    ).then(({ text, response }) => 
