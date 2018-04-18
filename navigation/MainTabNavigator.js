@@ -14,8 +14,8 @@ export default TabNavigator(
     Home: {
       screen: HomeScreen,
     },
-    Links: {
-      screen: LinksScreen,
+    Manual: {
+      screen: ManualScreen,
     },
     Settings: {
       screen: SettingsScreen,
