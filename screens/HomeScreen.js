@@ -21,7 +21,11 @@ export default class HomeScreen extends React.Component {
   super()
   this.spinValue = new Animated.Value(0)
 }
-
+spin () {
+  this.spinValue.setValue(0)
+  Animated.timing(
+    this.spinValue,
+    {
 
   render() {
     return (
