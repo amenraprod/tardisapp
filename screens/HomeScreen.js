@@ -32,6 +32,11 @@ spin () {
          }
        ).start(() => this.spin())
      }
+     render () {
+     const spin = this.spinValue.interpolate({
+       inputRange: [0, 1],
+       outputRange: ['0deg', '360deg']
+     })
 
   render() {
     return (
