@@ -28,3 +28,17 @@ function callApi(endpoint, authenticated) {
     }).catch(err => console.log(err))
 }
 export default store => next => action => {
+
+  return callApi(endpoint, authenticated).then(
+      response =>
+        next({
+          response,
+          authenticated,
+          type: successType
+        }),
+      error => next({
+        error: error.message || 'There was an error.',
+        type: errorType
+      })
+    )
+  }
