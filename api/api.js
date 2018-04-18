@@ -19,4 +19,11 @@ function callApi(endpoint, authenticated) {
             return fetch(login + endpoint, config)
              .then(response =>
                response.text().then(text => ({ text, response }))
-    ).then(({ text, response }) => 
+    ).then(({ text, response }) => {
+      if (!response.ok) {
+        return Promise.reject(text)
+      }
+
+      return text
+    }).catch(err => console.log(err))
+}
