@@ -7,3 +7,7 @@ function callApi(endpoint, authenticated) {
 
   if(authenticated) {
     if(token) {
+      config = {
+              headers: { 'Authorization': `Bearer ${token}` }
+            }
+          }
