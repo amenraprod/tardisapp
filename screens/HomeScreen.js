@@ -44,6 +44,7 @@ spin () {
           width: 230,
           height: 200,
            transform: [{rotate: spin}] }}
+           source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf7jNkt0N0Ga1y3KTqm2yzzktCOKUBhtnCffExVVWQ0sixjiS60A'}}
 
   render() {
     return (
