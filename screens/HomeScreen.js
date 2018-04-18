@@ -39,6 +39,9 @@ spin () {
      })
      return (
        <View style={styles.container}>
+       <Animated.Image
+        style={{
+          width: 230,
 
   render() {
     return (
