@@ -43,6 +43,7 @@ spin () {
         style={{
           width: 230,
           height: 200,
+           transform: [{rotate: spin}] }}
 
   render() {
     return (
