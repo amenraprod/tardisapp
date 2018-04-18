@@ -11,3 +11,7 @@ function callApi(endpoint, authenticated) {
               headers: { 'Authorization': `Bearer ${token}` }
             }
           }
+          else {
+                throw "No token saved!"
+              }
+            }
