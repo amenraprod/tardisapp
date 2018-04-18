@@ -42,6 +42,7 @@ spin () {
        <Animated.Image
         style={{
           width: 230,
+          height: 200,
 
   render() {
     return (
