@@ -17,6 +17,12 @@ export default class HomeScreen extends React.Component {
     header: null,
   };
 
+  constructor () {
+  super()
+  this.spinValue = new Animated.Value(0)
+}
+
+
   render() {
     return (
       <View style={styles.container}>
