@@ -1,0 +1,31 @@
+describe('when text changes', () => {
+   const newTextValue = 'random string';
+   beforeEach(() => {
+     textInput.simulate('changeText', newTextValue);
+   });
+
+   it('updates component state', () => {
+     expect(component.state().text).toEqual(newTextValue);
+   });
+
+   it('passes text from state to ReactNativeTestingChild', () => {
+     const childComponent = component.find(ReactNativeTestingChild);
+     expect(childComponent.props().text).toEqual(newTextValue)
+   });
+
+   it('passes text from state to ReactNativeTestingChild', () => {
+      const childComponent = component.find(ReactNativeTestingChild);
+      expect(childComponent.props().text).toEqual(newTextValue)
+    });
+
+    describe('when clearText callback is called', () => {
+      beforeEach(() => {
+        const childComponent = component.find(ReactNativeTestingChild);
+        childComponent.simulate('clear');
+      });
+
+      it('resets state', () => {
+        expect(component.state()).toEqual(defaultState);
+      });
+    });
+  });
