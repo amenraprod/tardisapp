@@ -7,3 +7,9 @@ export default class Logout extends Component {
 
         return (
           <button onClick={() => onLogoutClick()} className="btn btn-primary">
+          Logout
+               </button>
+             )
+           }
+
+         }
