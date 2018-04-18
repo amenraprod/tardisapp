@@ -27,3 +27,4 @@ function callApi(endpoint, authenticated) {
       return text
     }).catch(err => console.log(err))
 }
+export default store => next => action => {
