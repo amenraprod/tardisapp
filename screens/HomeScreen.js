@@ -26,6 +26,12 @@ spin () {
   Animated.timing(
     this.spinValue,
     {
+      toValue: 1,
+           duration: 4000,
+           easing: Easing.linear
+         }
+       ).start(() => this.spin())
+     }
 
   render() {
     return (
