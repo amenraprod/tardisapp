@@ -3,3 +3,13 @@ jest.unmock('../../src/ReactNativeTesting');
 import '../testutils/jest';
 import ReactNativeTesting from '../../src/ReactNativeTesting';
 import ReactNativeTestingChild from '../../src/ReactNativeTestingChild';
+
+describe('ReactNativeTesting', () => {
+  let component;
+  let textInput;
+  const defaultState = {text: ''};
+
+  test('renders correctly', () => {
+    const snapshot = renderer.create(<ReactNativeTesting />).toJSON();
+    expect(snapshot).toMatchSnapshot();
+  });
