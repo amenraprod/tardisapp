@@ -15,3 +15,6 @@ function callApi(endpoint, authenticated) {
                 throw "No token saved!"
               }
             }
+
+            return fetch(login + endpoint, config)
+             .then(response =>
